@@ -1,0 +1,24 @@
+//
+//  CreateTableViewCell.m
+//  IDNoCreater
+//
+//  Created by zhuang chaoxiao on 2019/1/4.
+//  Copyright © 2019年 zhuang chaoxiao. All rights reserved.
+//
+
+#import "CreateTableViewCell.h"
+
+@implementation CreateTableViewCell
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    // Initialization code
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
+@end
