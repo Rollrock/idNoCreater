@@ -9,6 +9,7 @@
 #import "CheckViewController.h"
 
 @interface CheckViewController ()
+@property (strong, nonatomic) IBOutlet UILabel *resultLab;
 @property (strong, nonatomic) IBOutlet UITextField *idNoField;
 - (IBAction)checkClicked;
 

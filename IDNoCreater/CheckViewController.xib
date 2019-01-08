@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckViewController">
             <connections>
                 <outlet property="idNoField" destination="ge9-aN-e5K" id="380-rc-ehx"/>
+                <outlet property="resultLab" destination="ZxJ-ZU-SZt" id="oSy-q3-oyA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,40 +22,60 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ge9-aN-e5K">
-                    <rect key="frame" x="117.5" y="241" width="140" height="30"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJO-hx-r4y">
+                    <rect key="frame" x="45" y="236.5" width="285" height="194"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ge9-aN-e5K">
+                            <rect key="frame" x="72.5" y="71" width="140" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="140" id="SQq-46-540"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1P-Rh-CDC">
+                            <rect key="frame" x="127" y="121" width="31" height="30"/>
+                            <state key="normal" title="校验"/>
+                            <connections>
+                                <action selector="checkClicked" destination="-1" eventType="touchUpInside" id="bTs-mu-184"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入身份证号码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25W-nD-qJd">
+                            <rect key="frame" x="73" y="0.0" width="139" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="校验错误" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZxJ-ZU-SZt">
+                            <rect key="frame" x="107.5" y="171" width="70" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="140" id="SQq-46-540"/>
+                        <constraint firstItem="ZxJ-ZU-SZt" firstAttribute="top" secondItem="G1P-Rh-CDC" secondAttribute="bottom" constant="20" id="0iG-Vt-pmM"/>
+                        <constraint firstItem="G1P-Rh-CDC" firstAttribute="centerX" secondItem="CJO-hx-r4y" secondAttribute="centerX" id="H2T-fr-be1"/>
+                        <constraint firstAttribute="height" constant="194" id="IBu-Ny-nrp"/>
+                        <constraint firstItem="ge9-aN-e5K" firstAttribute="centerX" secondItem="CJO-hx-r4y" secondAttribute="centerX" id="K5c-oj-XQf"/>
+                        <constraint firstItem="25W-nD-qJd" firstAttribute="centerX" secondItem="CJO-hx-r4y" secondAttribute="centerX" id="ONr-a8-RLb"/>
+                        <constraint firstItem="25W-nD-qJd" firstAttribute="top" secondItem="CJO-hx-r4y" secondAttribute="top" id="Qaz-mY-jaq"/>
+                        <constraint firstAttribute="width" constant="285" id="ey3-tu-WCP"/>
+                        <constraint firstItem="ZxJ-ZU-SZt" firstAttribute="centerX" secondItem="CJO-hx-r4y" secondAttribute="centerX" id="fJl-Dj-NRS"/>
+                        <constraint firstItem="ge9-aN-e5K" firstAttribute="top" secondItem="25W-nD-qJd" secondAttribute="bottom" constant="50" id="hWm-b5-2bH"/>
+                        <constraint firstItem="G1P-Rh-CDC" firstAttribute="top" secondItem="ge9-aN-e5K" secondAttribute="bottom" constant="20" id="kCE-Im-Lhq"/>
                     </constraints>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1P-Rh-CDC">
-                    <rect key="frame" x="172" y="291" width="31" height="30"/>
-                    <state key="normal" title="校验"/>
-                    <connections>
-                        <action selector="checkClicked" destination="-1" eventType="touchUpInside" id="bTs-mu-184"/>
-                    </connections>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入身份证号码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25W-nD-qJd">
-                    <rect key="frame" x="118" y="170" width="139" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="G1P-Rh-CDC" firstAttribute="top" secondItem="ge9-aN-e5K" secondAttribute="bottom" constant="20" id="Se5-4I-swy"/>
-                <constraint firstItem="ge9-aN-e5K" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TAa-3b-zmr"/>
-                <constraint firstItem="25W-nD-qJd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aEx-XV-8PS"/>
-                <constraint firstItem="G1P-Rh-CDC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lLN-2c-bII"/>
-                <constraint firstItem="ge9-aN-e5K" firstAttribute="top" secondItem="25W-nD-qJd" secondAttribute="bottom" constant="50" id="n72-qG-V5D"/>
-                <constraint firstItem="25W-nD-qJd" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="150" id="sAn-JI-vzs"/>
+                <constraint firstItem="CJO-hx-r4y" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7fG-7q-7kV"/>
+                <constraint firstItem="CJO-hx-r4y" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="fsE-33-dIA"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="-81" y="111"/>
+            <point key="canvasLocation" x="-110" y="85"/>
         </view>
     </objects>
 </document>

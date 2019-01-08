@@ -19,6 +19,14 @@
 		4861F11521DFB9F50060E571 /* CreateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4861F11321DFB9F50060E571 /* CreateTableViewCell.xib */; };
 		4861F11921DFBAB40060E571 /* CheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4861F11721DFBAB40060E571 /* CheckViewController.m */; };
 		4861F11A21DFBAB40060E571 /* CheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4861F11821DFBAB40060E571 /* CheckViewController.xib */; };
+		4861F11D21E1889F0060E571 /* RSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4861F11B21E1889E0060E571 /* RSheetPicker.m */; };
+		4861F11F21E18BE80060E571 /* area.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4861F11E21E18BE80060E571 /* area.txt */; };
+		4861F12221E18CC20060E571 /* CreateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4861F12121E18CC20060E571 /* CreateModel.m */; };
+		4861F12B21E484870060E571 /* CDPDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4861F12521E484860060E571 /* CDPDatePicker.m */; };
+		4861F12C21E484870060E571 /* KTSelectDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4861F12721E484860060E571 /* KTSelectDatePicker.m */; };
+		4861F12D21E484870060E571 /* KTSelectPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4861F12921E484860060E571 /* KTSelectPickerView.m */; };
+		4861F12E21E484870060E571 /* KTSelectPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4861F12A21E484860060E571 /* KTSelectPickerView.xib */; };
+		4861F13221E485890060E571 /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4861F13121E485880060E571 /* NSDate+Helper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +49,20 @@
 		4861F11621DFBAB40060E571 /* CheckViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckViewController.h; sourceTree = "<group>"; };
 		4861F11721DFBAB40060E571 /* CheckViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckViewController.m; sourceTree = "<group>"; };
 		4861F11821DFBAB40060E571 /* CheckViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckViewController.xib; sourceTree = "<group>"; };
+		4861F11B21E1889E0060E571 /* RSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSheetPicker.m; sourceTree = "<group>"; };
+		4861F11C21E1889F0060E571 /* RSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSheetPicker.h; sourceTree = "<group>"; };
+		4861F11E21E18BE80060E571 /* area.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = area.txt; sourceTree = "<group>"; };
+		4861F12021E18CC20060E571 /* CreateModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateModel.h; sourceTree = "<group>"; };
+		4861F12121E18CC20060E571 /* CreateModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateModel.m; sourceTree = "<group>"; };
+		4861F12421E484860060E571 /* CDPDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDPDatePicker.h; sourceTree = "<group>"; };
+		4861F12521E484860060E571 /* CDPDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDPDatePicker.m; sourceTree = "<group>"; };
+		4861F12621E484860060E571 /* KTSelectDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTSelectDatePicker.h; sourceTree = "<group>"; };
+		4861F12721E484860060E571 /* KTSelectDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTSelectDatePicker.m; sourceTree = "<group>"; };
+		4861F12821E484860060E571 /* KTSelectPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTSelectPickerView.h; sourceTree = "<group>"; };
+		4861F12921E484860060E571 /* KTSelectPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTSelectPickerView.m; sourceTree = "<group>"; };
+		4861F12A21E484860060E571 /* KTSelectPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KTSelectPickerView.xib; sourceTree = "<group>"; };
+		4861F13021E485880060E571 /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
+		4861F13121E485880060E571 /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +95,10 @@
 		4861F0F521DF971F0060E571 /* IDNoCreater */ = {
 			isa = PBXGroup;
 			children = (
+				4861F12321E484860060E571 /* 时间选择器 */,
+				4861F11E21E18BE80060E571 /* area.txt */,
+				4861F11C21E1889F0060E571 /* RSheetPicker.h */,
+				4861F11B21E1889E0060E571 /* RSheetPicker.m */,
 				4861F0F621DF971F0060E571 /* AppDelegate.h */,
 				4861F0F721DF971F0060E571 /* AppDelegate.m */,
 				4861F0F921DF971F0060E571 /* ViewController.h */,
@@ -91,8 +117,34 @@
 				4861F11621DFBAB40060E571 /* CheckViewController.h */,
 				4861F11721DFBAB40060E571 /* CheckViewController.m */,
 				4861F11821DFBAB40060E571 /* CheckViewController.xib */,
+				4861F12021E18CC20060E571 /* CreateModel.h */,
+				4861F12121E18CC20060E571 /* CreateModel.m */,
 			);
 			path = IDNoCreater;
+			sourceTree = "<group>";
+		};
+		4861F12321E484860060E571 /* 时间选择器 */ = {
+			isa = PBXGroup;
+			children = (
+				4861F12F21E485880060E571 /* nsdate-helper-master */,
+				4861F12421E484860060E571 /* CDPDatePicker.h */,
+				4861F12521E484860060E571 /* CDPDatePicker.m */,
+				4861F12621E484860060E571 /* KTSelectDatePicker.h */,
+				4861F12721E484860060E571 /* KTSelectDatePicker.m */,
+				4861F12821E484860060E571 /* KTSelectPickerView.h */,
+				4861F12921E484860060E571 /* KTSelectPickerView.m */,
+				4861F12A21E484860060E571 /* KTSelectPickerView.xib */,
+			);
+			path = "时间选择器";
+			sourceTree = "<group>";
+		};
+		4861F12F21E485880060E571 /* nsdate-helper-master */ = {
+			isa = PBXGroup;
+			children = (
+				4861F13021E485880060E571 /* NSDate+Helper.h */,
+				4861F13121E485880060E571 /* NSDate+Helper.m */,
+			);
+			path = "nsdate-helper-master";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,9 +207,11 @@
 				4861F11521DFB9F50060E571 /* CreateTableViewCell.xib in Resources */,
 				4861F11021DF97580060E571 /* CreateViewController.xib in Resources */,
 				4861F10321DF972B0060E571 /* LaunchScreen.storyboard in Resources */,
+				4861F11F21E18BE80060E571 /* area.txt in Resources */,
 				4861F11A21DFBAB40060E571 /* CheckViewController.xib in Resources */,
 				4861F10021DF972B0060E571 /* Assets.xcassets in Resources */,
 				4861F0FE21DF971F0060E571 /* Main.storyboard in Resources */,
+				4861F12E21E484870060E571 /* KTSelectPickerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,12 +222,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4861F13221E485890060E571 /* NSDate+Helper.m in Sources */,
+				4861F12C21E484870060E571 /* KTSelectDatePicker.m in Sources */,
+				4861F12B21E484870060E571 /* CDPDatePicker.m in Sources */,
 				4861F10F21DF97580060E571 /* CreateViewController.m in Sources */,
 				4861F11921DFBAB40060E571 /* CheckViewController.m in Sources */,
 				4861F0FB21DF971F0060E571 /* ViewController.m in Sources */,
 				4861F10621DF972C0060E571 /* main.m in Sources */,
 				4861F0F821DF971F0060E571 /* AppDelegate.m in Sources */,
+				4861F12221E18CC20060E571 /* CreateModel.m in Sources */,
 				4861F11421DFB9F50060E571 /* CreateTableViewCell.m in Sources */,
+				4861F11D21E1889F0060E571 /* RSheetPicker.m in Sources */,
+				4861F12D21E484870060E571 /* KTSelectPickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +378,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 68ZZHJ7ARV;
 				INFOPLIST_FILE = IDNoCreater/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,7 +386,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yanghuijuan.IDNoCreater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = YangDev;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -337,6 +398,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 68ZZHJ7ARV;
 				INFOPLIST_FILE = IDNoCreater/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,7 +406,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yanghuijuan.IDNoCreater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = YangDis;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

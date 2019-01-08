@@ -8,6 +8,12 @@
 
 #import "CreateTableViewCell.h"
 
+@interface CreateTableViewCell()
+@property (strong, nonatomic) IBOutlet UILabel *NOLab;
+
+
+@end
+
 @implementation CreateTableViewCell
 
 - (void)awakeFromNib {
@@ -19,6 +25,11 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+-(void)refreshCell:(NSString*)str
+{
+    self.NOLab.text = str;
 }
 
 @end

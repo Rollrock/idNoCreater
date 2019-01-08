@@ -18,8 +18,28 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNs-rj-3iw">
+                        <rect key="frame" x="26" y="7" width="268" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="plu-6A-n32"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gNs-rj-3iw" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="JDl-Hs-O0c"/>
+                    <constraint firstItem="gNs-rj-3iw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="g7b-NO-sF0"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="gNs-rj-3iw" secondAttribute="trailing" constant="10" id="usi-Tg-7jR"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="NOLab" destination="gNs-rj-3iw" id="KoI-dV-A5y"/>
+            </connections>
+            <point key="canvasLocation" x="261" y="112"/>
         </tableViewCell>
     </objects>
 </document>
