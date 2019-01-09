@@ -27,6 +27,7 @@
 		4861F12D21E484870060E571 /* KTSelectPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4861F12921E484860060E571 /* KTSelectPickerView.m */; };
 		4861F12E21E484870060E571 /* KTSelectPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4861F12A21E484860060E571 /* KTSelectPickerView.xib */; };
 		4861F13221E485890060E571 /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4861F13121E485880060E571 /* NSDate+Helper.m */; };
+		4861F13521E6022A0060E571 /* UILabel+Copy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4861F13421E6022A0060E571 /* UILabel+Copy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,8 @@
 		4861F12A21E484860060E571 /* KTSelectPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KTSelectPickerView.xib; sourceTree = "<group>"; };
 		4861F13021E485880060E571 /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
 		4861F13121E485880060E571 /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
+		4861F13321E6022A0060E571 /* UILabel+Copy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Copy.h"; sourceTree = "<group>"; };
+		4861F13421E6022A0060E571 /* UILabel+Copy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Copy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				4861F11821DFBAB40060E571 /* CheckViewController.xib */,
 				4861F12021E18CC20060E571 /* CreateModel.h */,
 				4861F12121E18CC20060E571 /* CreateModel.m */,
+				4861F13321E6022A0060E571 /* UILabel+Copy.h */,
+				4861F13421E6022A0060E571 /* UILabel+Copy.m */,
 			);
 			path = IDNoCreater;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 				4861F11421DFB9F50060E571 /* CreateTableViewCell.m in Sources */,
 				4861F11D21E1889F0060E571 /* RSheetPicker.m in Sources */,
 				4861F12D21E484870060E571 /* KTSelectPickerView.m in Sources */,
+				4861F13521E6022A0060E571 /* UILabel+Copy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "CreateTableViewCell.h"
+#import "UILabel+Copy.h"
 
 @interface CreateTableViewCell()
 @property (strong, nonatomic) IBOutlet UILabel *NOLab;
@@ -30,6 +31,7 @@
 -(void)refreshCell:(NSString*)str
 {
     self.NOLab.text = str;
+    self.NOLab.isCopyable = YES;
 }
 
 @end
