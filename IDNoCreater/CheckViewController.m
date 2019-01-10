@@ -145,6 +145,7 @@
 
 - (IBAction)checkClicked {
     
+    [self.idNoField resignFirstResponder];
     
     self.idNoField.text = [self.idNoField.text stringByReplacingOccurrencesOfString:@" " withString:@""];
     
@@ -158,6 +159,8 @@
     else
     {
         self.resultLab.text = @"身份证错误";
+        self.birLab.text = @"";
+        self.sexLab.text = @"";
     }
 }
 @end

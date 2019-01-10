@@ -36,6 +36,8 @@
 
 - (IBAction)checkClicked {
     
+    [self.ipNoField resignFirstResponder];
+    
       NSString *urlstring = [NSString stringWithFormat:@"http://apis.juhe.cn/ip/ip2addr?ip=%@&key=00f0818ab4adaec82c83ee141f4a1d03",self.ipNoField.text];
     
     [NetWorkUikits requestWithUrl:urlstring param:nil completionHandle:^(id data) {
