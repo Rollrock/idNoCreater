@@ -41,6 +41,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.title = @"身份证生成";
     self.birLab.text = @"1987-04-25";
     
     self.tableView.rowHeight = 50;

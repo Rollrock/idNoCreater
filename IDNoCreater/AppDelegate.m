@@ -13,6 +13,11 @@
 
 @interface AppDelegate ()
 
+@property(strong,nonatomic) UITabBarController * tabVC;
+@property(strong,nonatomic) CreateViewController * createVC;
+@property(strong,nonatomic) CheckViewController * checkVC;
+@property(strong,nonatomic) IPCheckViewController * ipCheckVC;
+
 @end
 
 @implementation AppDelegate
@@ -23,11 +28,9 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
-    //CreateViewController * vc = [CreateViewController new];
+    UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:self.tabVC];
     
-    IPCheckViewController * vc = [IPCheckViewController new];
-    
-    self.window.rootViewController = vc;
+    self.window.rootViewController = nav;
     
     [self.window makeKeyAndVisible];
     
@@ -61,5 +64,50 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+#pragma setter & getter
+-(UITabBarController*)tabVC
+{
+    if( !_tabVC )
+    {
+        _tabVC = [UITabBarController new];
+        [_tabVC setViewControllers:@[self.createVC,self.checkVC,self.ipCheckVC]];
+    }
+    
+    return _tabVC;
+}
+
+-(CreateViewController*)createVC
+{
+    if( !_createVC )
+    {
+        _createVC = [CreateViewController new];
+        _createVC.tabBarItem.title = @"身份证生成";
+    }
+    
+    return _createVC;
+}
+
+-(IPCheckViewController*)ipCheckVC
+{
+    if( !_ipCheckVC )
+    {
+        _ipCheckVC = [IPCheckViewController new];
+        _ipCheckVC.tabBarItem.title = @"IP校验";
+    }
+    
+    return _ipCheckVC;
+}
+
+-(CheckViewController*)checkVC
+{
+    if( !_checkVC )
+    {
+        _checkVC = [CheckViewController new];
+        _checkVC.tabBarItem.title = @"身份证校验";
+    }
+    
+    return _checkVC;
+}
 
 @end

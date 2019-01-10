@@ -17,8 +17,8 @@
 @interface IPCheckViewController ()
 
 @property (strong, nonatomic) IBOutlet UILabel *resultLab;
-@property (strong, nonatomic) IBOutlet UILabel *birLab;
-@property (strong, nonatomic) IBOutlet UILabel *sexLab;
+@property (strong, nonatomic) IBOutlet UILabel *areaLab;
+@property (strong, nonatomic) IBOutlet UILabel *serviceLab;
 @property (strong, nonatomic) IBOutlet UITextField *ipNoField;
 
 - (IBAction)checkClicked;
@@ -30,21 +30,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.title = @"IP地址校验";
 }
-
 
 - (IBAction)checkClicked {
     
-    NSString *urlstring = [NSString stringWithFormat:@"%@%@",@"http://ip.taobao.com/service/getIpInfo.php?ip=",self.ipNoField.text];
+      NSString *urlstring = [NSString stringWithFormat:@"http://apis.juhe.cn/ip/ip2addr?ip=%@&key=00f0818ab4adaec82c83ee141f4a1d03",self.ipNoField.text];
     
     [NetWorkUikits requestWithUrl:urlstring param:nil completionHandle:^(id data) {
         
         NSLog(@"数据收到:%@",data);
+        if( [data[@"resultcode"] intValue] == 200 )
+        {
+            self.resultLab.text = @"合法地址";
+            self.areaLab.text = data[@"result"][@"area"];
+            self.serviceLab.text = data[@"result"][@"location"];
+        }
+        else
+        {
+            self.resultLab.text = data[@"reason"];
+            self.areaLab.text = @"";
+            self.serviceLab.text = @"";
+        }
+        
+        
     
     } failureHandle:^(NSError *error) {
         
         NSLog(@"error:%@",error);
-        
+        self.resultLab.text = error.description;
+        self.areaLab.text = @"";
+        self.serviceLab.text = @"";
     
     }];
 }

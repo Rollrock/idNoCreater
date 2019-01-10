@@ -12,10 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IPCheckViewController">
             <connections>
-                <outlet property="birLab" destination="7gS-d6-BFd" id="q6p-V3-9Qw"/>
+                <outlet property="areaLab" destination="7gS-d6-BFd" id="gTg-on-2bi"/>
                 <outlet property="ipNoField" destination="9qq-OD-p9a" id="GtO-Kf-Yn6"/>
                 <outlet property="resultLab" destination="FXn-IZ-1Y8" id="DzL-Bl-oly"/>
-                <outlet property="sexLab" destination="OFk-f5-ti2" id="odl-hv-0xZ"/>
+                <outlet property="serviceLab" destination="OFk-f5-ti2" id="A1v-es-zzk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,7 +28,10 @@
                     <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IP地址:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTQ-j7-MnI">
-                            <rect key="frame" x="20" y="14.5" width="54" height="21"/>
+                            <rect key="frame" x="20" y="14.5" width="80" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="lEH-KK-XbC"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -44,10 +47,10 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9qq-OD-p9a">
-                            <rect key="frame" x="76" y="8" width="294" height="33.5"/>
+                            <rect key="frame" x="102" y="8" width="268" height="33.5"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -67,7 +70,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chA-Tx-RpZ">
                     <rect key="frame" x="0.0" y="70" width="375" height="50"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="出生年月:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tU-Vr-05s">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地区:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tU-Vr-05s">
                             <rect key="frame" x="20" y="14.5" width="80" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="80" id="WbT-Tj-NII"/>
@@ -110,7 +113,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gw4-AB-DW4">
                     <rect key="frame" x="0.0" y="120" width="375" height="50"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="性别:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkz-hC-ssn">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="供应商:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkz-hC-ssn">
                             <rect key="frame" x="20" y="14.5" width="80" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="80" id="vzz-Iu-i38"/>
@@ -232,7 +235,7 @@
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="chA-Tx-RpZ" secondAttribute="trailing" id="yeK-su-HyW"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="-466" y="93"/>
+            <point key="canvasLocation" x="-258" y="61"/>
         </view>
     </objects>
 </document>
