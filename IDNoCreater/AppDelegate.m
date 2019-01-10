@@ -11,7 +11,7 @@
 #import "CheckViewController.h"
 #import "IPCheckViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UITabBarControllerDelegate>
 
 @property(strong,nonatomic) UITabBarController * tabVC;
 @property(strong,nonatomic) CreateViewController * createVC;
@@ -63,7 +63,24 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
+//
+-(BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
+{
+    if( viewController == self.ipCheckVC )
+    {
+        self.tabVC.title = @"IP地址校验";
+    }
+    else if( viewController == self.createVC )
+    {
+        self.tabVC.title = @"身份证生成";
+    }
+    else if( viewController == self.checkVC )
+    {
+        self.tabVC.title = @"身份证校验";
+    }
+    
+    return YES;
+}
 
 #pragma setter & getter
 -(UITabBarController*)tabVC
@@ -72,6 +89,8 @@
     {
         _tabVC = [UITabBarController new];
         [_tabVC setViewControllers:@[self.createVC,self.checkVC,self.ipCheckVC]];
+        _tabVC.title = @"身份证生成";
+        _tabVC.delegate = self;
     }
     
     return _tabVC;
@@ -83,6 +102,7 @@
     {
         _createVC = [CreateViewController new];
         _createVC.tabBarItem.title = @"身份证生成";
+        _createVC.tabBarItem.image = [UIImage imageNamed:@"a"];
     }
     
     return _createVC;
@@ -94,6 +114,7 @@
     {
         _ipCheckVC = [IPCheckViewController new];
         _ipCheckVC.tabBarItem.title = @"IP校验";
+        _ipCheckVC.tabBarItem.image = [UIImage imageNamed:@"b"];
     }
     
     return _ipCheckVC;
@@ -105,6 +126,7 @@
     {
         _checkVC = [CheckViewController new];
         _checkVC.tabBarItem.title = @"身份证校验";
+        _checkVC.tabBarItem.image = [UIImage imageNamed:@"c"];
     }
     
     return _checkVC;
