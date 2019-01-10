@@ -26,7 +26,13 @@
     // Do any additional setup after loading the view from its nib.
     
     self.title = @"身份证校验";
+    self.idNoField.text = @"330481198704252816";
     
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [self checkClicked];
+        
+    });
 }
 
 -(BOOL)judgeIdentityStringValid:(NSString *)identityString {

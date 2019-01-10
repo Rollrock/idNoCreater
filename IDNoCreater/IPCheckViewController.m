@@ -32,6 +32,13 @@
     // Do any additional setup after loading the view from its nib.
     
     self.title = @"IP地址校验";
+    self.ipNoField.text = @"180.165.159.87";
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [self checkClicked];
+        
+    });
 }
 
 - (IBAction)checkClicked {
@@ -55,9 +62,7 @@
             self.areaLab.text = @"";
             self.serviceLab.text = @"";
         }
-        
-        
-    
+
     } failureHandle:^(NSError *error) {
         
         NSLog(@"error:%@",error);

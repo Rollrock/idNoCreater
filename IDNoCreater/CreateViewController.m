@@ -48,6 +48,12 @@
     [self.tableView setTableFooterView:[UIView new]];
     
     [self addGesture];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [self generateClicked];
+        
+    });
 }
 
 #pragma private
@@ -94,8 +100,6 @@
 
 -(NSString*)createBirNo
 {
-    //return @"19870425";
-    
     NSString * str = self.birLab.text;
     str = [str stringByReplacingOccurrencesOfString:@"-" withString:@""];
     return str;
@@ -125,10 +129,8 @@
 {
     NSString * str = [NSString stringWithFormat:@"%@%@%@%@",[self createAddrNo],[self createBirNo],[self createPoliceNo],[self createSexNo]];
     
-    //7 9 10 5 8 4 2 1 6 3 7 9 10 5 8 4 2
     int sum = 0;
     NSArray * sumRand = @[@"7", @"9", @"10", @"5", @"8", @"4", @"2", @"1", @"6", @"3", @"7", @"9", @"10", @"5", @"8", @"4", @"2"];
-    
     
     for( int i =0; i < str.length; ++ i )
     {
@@ -188,9 +190,7 @@
     return [NSString stringWithFormat:@"%@%@",str,checkNo];
 }
 
-
 #pragma RSheetPicker
-
 -(NSArray*)pickerDataSource:(RSheetPicker*)picker
 {
     if( picker == self.sexSheet )
