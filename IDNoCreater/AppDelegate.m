@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "CreateViewController.h"
+#import "CheckViewController.h"
+#import "IPCheckViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +23,10 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
-    CreateViewController * vc = [CreateViewController new];
+    //CreateViewController * vc = [CreateViewController new];
+    
+    IPCheckViewController * vc = [IPCheckViewController new];
+    
     self.window.rootViewController = vc;
     
     [self.window makeKeyAndVisible];

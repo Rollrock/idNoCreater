@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IPCheckViewController">
             <connections>
                 <outlet property="birLab" destination="7gS-d6-BFd" id="q6p-V3-9Qw"/>
-                <outlet property="idNoField" destination="9qq-OD-p9a" id="Qqn-gM-XPt"/>
+                <outlet property="ipNoField" destination="9qq-OD-p9a" id="GtO-Kf-Yn6"/>
                 <outlet property="resultLab" destination="FXn-IZ-1Y8" id="DzL-Bl-oly"/>
                 <outlet property="sexLab" destination="OFk-f5-ti2" id="odl-hv-0xZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -27,8 +27,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JGk-bt-74r">
                     <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="身份证号码:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTQ-j7-MnI">
-                            <rect key="frame" x="20" y="14.5" width="92" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IP地址:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTQ-j7-MnI">
+                            <rect key="frame" x="20" y="14.5" width="54" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9qq-OD-p9a">
-                            <rect key="frame" x="114" y="8" width="256" height="33.5"/>
+                            <rect key="frame" x="76" y="8" width="294" height="33.5"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <textInputTraits key="textInputTraits"/>
@@ -232,7 +232,7 @@
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="chA-Tx-RpZ" secondAttribute="trailing" id="yeK-su-HyW"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="-220" y="-39"/>
+            <point key="canvasLocation" x="-466" y="93"/>
         </view>
     </objects>
 </document>

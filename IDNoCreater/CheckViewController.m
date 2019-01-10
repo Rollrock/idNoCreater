@@ -10,7 +10,11 @@
 
 @interface CheckViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *resultLab;
+@property (strong, nonatomic) IBOutlet UILabel *birLab;
+@property (strong, nonatomic) IBOutlet UILabel *sexLab;
+
 @property (strong, nonatomic) IBOutlet UITextField *idNoField;
+
 - (IBAction)checkClicked;
 
 @end
@@ -69,16 +73,90 @@
 }
 
 
+-(NSString *)birthdayStrFromIdentityCard:(NSString *)numberStr
+{
+    NSMutableString *result = [NSMutableString stringWithCapacity:0];
+    
+    NSString *year = nil;
+    NSString *month = nil;
+    BOOL isAllNumber = YES;
+    NSString *day = nil;
+    if([numberStr length]<18)
+        return result;
+
+    //**从第6位开始 截取8个数
+    
+    NSString *fontNumer = [numberStr substringWithRange:NSMakeRange(6, 8)];
+
+    //**检测前12位否全都是数字;
+    
+    const char *str = [fontNumer UTF8String];
+    const char *p = str;
+    while (*p!='\0') {
+        if(!(*p>='0'&&*p<='9'))
+            isAllNumber = NO;
+        p++;
+    }
+    
+    if(!isAllNumber)
+        return result;
+
+    year = [NSString stringWithFormat:@"19%@",[numberStr substringWithRange:NSMakeRange(8, 2)]];
+
+    month = [numberStr substringWithRange:NSMakeRange(10, 2)];
+    day = [numberStr substringWithRange:NSMakeRange(12,2)];
+    
+    [result appendString:year];
+    [result appendString:@"-"];
+    [result appendString:month];
+    [result appendString:@"-"];
+    [result appendString:day];
+    
+    return result;
+}
+
+/**
+ *  从身份证上获取性别
+ */
+
+-(NSString *)getIdentityCardSex:(NSString *)numberStr
+{
+    NSString *sex = @"";
+    //获取18位 二代身份证  性别
+    if (numberStr.length==18)
+    {
+        int sexInt=[[numberStr substringWithRange:NSMakeRange(16,1)] intValue];
+        
+        if(sexInt%2!=0)
+        {
+            NSLog(@"1");
+            sex = @"男";
+        }
+        else
+        {
+            NSLog(@"2");
+            sex = @"女";
+        }
+    }
+    
+    return sex;
+}
 
 - (IBAction)checkClicked {
     
+    
+    self.idNoField.text = [self.idNoField.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
     if( [self judgeIdentityStringValid:self.idNoField.text] )
     {
+        self.resultLab.text = @"身份证正确";
         
+        self.birLab.text = [self birthdayStrFromIdentityCard:self.idNoField.text];
+        self.sexLab.text = [self getIdentityCardSex:self.idNoField.text];
     }
     else
     {
-        
+        self.resultLab.text = @"身份证错误";
     }
 }
 @end
