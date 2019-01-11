@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateViewController">
             <connections>
+                <outlet property="advBanner" destination="BS9-Bi-W2m" id="eSr-Cw-l9h"/>
                 <outlet property="birLab" destination="se5-sA-L6n" id="odW-lA-iQV"/>
                 <outlet property="countLab" destination="014-bG-mWW" id="XZ8-m6-6py"/>
                 <outlet property="provLab" destination="Kjq-kA-owp" id="lPA-mi-TPG"/>
@@ -126,7 +127,7 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oKS-cV-LUz">
-                    <rect key="frame" x="0.0" y="284.5" width="375" height="382"/>
+                    <rect key="frame" x="0.0" y="339.5" width="375" height="327"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="oj7-Yw-Uw1"/>
@@ -162,6 +163,13 @@
                         <constraint firstAttribute="bottom" secondItem="NZ2-lW-urF" secondAttribute="bottom" constant="5" id="vGJ-Q3-I07"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BS9-Bi-W2m">
+                    <rect key="frame" x="0.0" y="284.5" width="375" height="55"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="mdM-Yd-Cvc"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -169,24 +177,27 @@
                 <constraint firstItem="NJX-go-mih" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3l7-FF-kzl"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="2xH-ed-GlS" secondAttribute="trailing" id="6wF-5s-876"/>
                 <constraint firstItem="2xH-ed-GlS" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="9RP-WE-eAb"/>
+                <constraint firstItem="BS9-Bi-W2m" firstAttribute="top" secondItem="f3X-aN-xtd" secondAttribute="bottom" id="C8Q-3P-q4g"/>
                 <constraint firstItem="oKS-cV-LUz" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="JSC-zX-UNi"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="NJX-go-mih" secondAttribute="trailing" id="KA1-qG-kGw"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="R8j-JY-b97" secondAttribute="trailing" id="MGw-c6-AeS"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="BS9-Bi-W2m" secondAttribute="trailing" id="P1A-hL-QEG"/>
                 <constraint firstItem="f3X-aN-xtd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PCB-XK-esv"/>
                 <constraint firstItem="NJX-go-mih" firstAttribute="top" secondItem="2xH-ed-GlS" secondAttribute="bottom" constant="0.5" id="SOi-89-YIU"/>
                 <constraint firstItem="R8j-JY-b97" firstAttribute="top" secondItem="NJX-go-mih" secondAttribute="bottom" constant="0.5" id="YCb-7s-TBt"/>
                 <constraint firstItem="R8j-JY-b97" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aDT-1S-PRG"/>
                 <constraint firstItem="2xH-ed-GlS" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="aaY-ah-hNz"/>
+                <constraint firstItem="oKS-cV-LUz" firstAttribute="top" secondItem="BS9-Bi-W2m" secondAttribute="bottom" id="gRJ-AZ-c43"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="oKS-cV-LUz" secondAttribute="bottom" constant="0.5" id="hJH-ZQ-sFf"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="f3X-aN-xtd" secondAttribute="trailing" id="j7B-4j-t3G"/>
                 <constraint firstItem="jAq-sf-2QC" firstAttribute="top" secondItem="R8j-JY-b97" secondAttribute="bottom" constant="0.5" id="jDH-j7-52Y"/>
                 <constraint firstItem="jAq-sf-2QC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="p7L-Zt-n91"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="jAq-sf-2QC" secondAttribute="trailing" id="pOl-gw-taE"/>
-                <constraint firstItem="oKS-cV-LUz" firstAttribute="top" secondItem="f3X-aN-xtd" secondAttribute="bottom" id="vx1-WV-twD"/>
+                <constraint firstItem="BS9-Bi-W2m" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="psi-GR-VEg"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="oKS-cV-LUz" secondAttribute="trailing" id="wPe-HU-bZh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="-1887" y="18"/>
+            <point key="canvasLocation" x="-2265" y="18"/>
         </view>
     </objects>
 </document>

@@ -11,6 +11,9 @@
 #import "CheckViewController.h"
 #import "IPCheckViewController.h"
 
+@import GoogleMobileAds;
+
+
 @interface AppDelegate ()<UITabBarControllerDelegate>
 
 @property(strong,nonatomic) UITabBarController * tabVC;
@@ -33,6 +36,8 @@
     self.window.rootViewController = nav;
     
     [self.window makeKeyAndVisible];
+    
+    [GADMobileAds configureWithApplicationID:@"ca-app-pub-3058205099381432~7974790223"];
     
     return YES;
 }

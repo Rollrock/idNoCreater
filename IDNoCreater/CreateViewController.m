@@ -16,14 +16,15 @@
 #import "JSONKit.h"
 #import "CreateModel.h"
 
+@import GoogleMobileAds;
+
 @interface CreateViewController ()<UITableViewDelegate,UITableViewDataSource,RSheetPickerDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *provLab;
-@property (strong, nonatomic) IBOutlet UILabel *cityLab;
-@property (strong, nonatomic) IBOutlet UILabel *areaLab;
 @property (strong, nonatomic) IBOutlet UILabel *birLab;
 @property (strong, nonatomic) IBOutlet UILabel *sexLab;
 @property (strong, nonatomic) IBOutlet UILabel *countLab;
+@property (strong, nonatomic) IBOutlet UIView *advBanner;
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
@@ -33,6 +34,8 @@
 @property (strong,nonatomic) RSheetPicker * provSheet;
 @property (strong,nonatomic) NSMutableArray * generArray;
 @property (strong,nonatomic) NSMutableDictionary * provDict;
+
+@property(nonatomic, strong) GADInterstitial *interstitial;
 
 @end
 
@@ -52,6 +55,7 @@
     
     [self addGesture];
     [self getProvData];
+    [self layoutAdv];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
@@ -61,6 +65,44 @@
 }
 
 #pragma private
+
+
+-(void)layoutAdv
+{
+    GADBannerView * banner = [[GADBannerView alloc]initWithAdSize:kGADAdSizeSmartBannerPortrait];
+    banner.rootViewController = self;
+    banner.adUnitID = @"ca-app-pub-3058205099381432/2530891856";
+    
+    GADRequest * req = [GADRequest request];
+    req.testDevices = @[ @"02257fbde9fc053b183b97056fe93ff4" ];
+    [banner loadRequest:req];
+    
+    [self.advBanner addSubview:banner];
+    
+    
+    //
+    {
+        //
+        self.interstitial = [[GADInterstitial alloc]
+                             initWithAdUnitID:@"ca-app-pub-3058205099381432/6086993486"];
+        
+        
+        GADRequest * request = [GADRequest request];
+        request.testDevices = @[ @"02257fbde9fc053b183b97056fe93ff4" ];
+        [self.interstitial loadRequest:request];
+    }
+    
+    //
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        if (self.interstitial.isReady)
+        {
+            [self.interstitial presentFromRootViewController:self];
+        }
+    });
+}
+
+
 -(void)addGesture
 {
     UITapGestureRecognizer * g = nil;
@@ -68,16 +110,6 @@
     g = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(porvClicked)];
     self.provLab.userInteractionEnabled = YES;
     [self.provLab addGestureRecognizer:g];
-    
-    //
-    g = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(cityClicked)];
-    self.cityLab.userInteractionEnabled = YES;
-    [self.cityLab addGestureRecognizer:g];
-    
-    //
-    g = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(areaClicked)];
-    self.areaLab.userInteractionEnabled = YES;
-    [self.areaLab addGestureRecognizer:g];
     
     //
     g = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(birClicked)];
@@ -249,7 +281,7 @@
     
     if( picker == self.provSheet )
     {
-        [self.provDict.allKeys objectAtIndex:row];
+      self.provLab.text = [self.provDict.allKeys objectAtIndex:row];
     }
 }
 

@@ -49,6 +49,8 @@
 		4861F1AD21E60E590060E571 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4861F19A21E60E590060E571 /* UIRefreshControl+AFNetworking.m */; };
 		4861F1AE21E60E590060E571 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4861F19C21E60E590060E571 /* UIWebView+AFNetworking.m */; };
 		4861F1B121E8301E0060E571 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4861F1AF21E8301C0060E571 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4861F1B521E840F10060E571 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4861F1B321E840F00060E571 /* GoogleMobileAds.framework */; };
+		4861F1B621E840F10060E571 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4861F1B421E840F00060E571 /* README.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +131,8 @@
 		4861F19C21E60E590060E571 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		4861F1AF21E8301C0060E571 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		4861F1B021E8301D0060E571 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		4861F1B321E840F00060E571 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		4861F1B421E840F00060E571 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4861F1B521E840F10060E571 /* GoogleMobileAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +166,7 @@
 		4861F0F521DF971F0060E571 /* IDNoCreater */ = {
 			isa = PBXGroup;
 			children = (
+				4861F1B221E840F00060E571 /* GoogleMobileAdsSdkiOS-7.37.0 */,
 				4861F1B021E8301D0060E571 /* JSONKit.h */,
 				4861F1AF21E8301C0060E571 /* JSONKit.m */,
 				4861F17521E60E590060E571 /* AFNetworking */,
@@ -281,6 +287,15 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		4861F1B221E840F00060E571 /* GoogleMobileAdsSdkiOS-7.37.0 */ = {
+			isa = PBXGroup;
+			children = (
+				4861F1B321E840F00060E571 /* GoogleMobileAds.framework */,
+				4861F1B421E840F00060E571 /* README.txt */,
+			);
+			path = "GoogleMobileAdsSdkiOS-7.37.0";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -348,6 +363,7 @@
 				4861F13A21E60AB30060E571 /* IPCheckViewController.xib in Resources */,
 				4861F0FE21DF971F0060E571 /* Main.storyboard in Resources */,
 				4861F1A521E60E590060E571 /* README.md in Resources */,
+				4861F1B621E840F10060E571 /* README.txt in Resources */,
 				4861F12E21E484870060E571 /* KTSelectPickerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -533,6 +549,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 68ZZHJ7ARV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IDNoCreater/GoogleMobileAdsSdkiOS-7.37.0",
+				);
 				INFOPLIST_FILE = IDNoCreater/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -553,6 +573,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 68ZZHJ7ARV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IDNoCreater/GoogleMobileAdsSdkiOS-7.37.0",
+				);
 				INFOPLIST_FILE = IDNoCreater/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
