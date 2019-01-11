@@ -10,6 +10,7 @@
 #import "CreateViewController.h"
 #import "CheckViewController.h"
 #import "IPCheckViewController.h"
+#import "RFRateMe.h"
 
 @import GoogleMobileAds;
 
@@ -28,6 +29,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    [RFRateMe showRateAlertAfterTimesOpened:3];
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
