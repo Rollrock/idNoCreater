@@ -48,6 +48,7 @@
 		4861F1AC21E60E590060E571 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4861F19821E60E590060E571 /* UIProgressView+AFNetworking.m */; };
 		4861F1AD21E60E590060E571 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4861F19A21E60E590060E571 /* UIRefreshControl+AFNetworking.m */; };
 		4861F1AE21E60E590060E571 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4861F19C21E60E590060E571 /* UIWebView+AFNetworking.m */; };
+		4861F1B121E8301E0060E571 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4861F1AF21E8301C0060E571 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +127,8 @@
 		4861F19A21E60E590060E571 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		4861F19B21E60E590060E571 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		4861F19C21E60E590060E571 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		4861F1AF21E8301C0060E571 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		4861F1B021E8301D0060E571 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +161,8 @@
 		4861F0F521DF971F0060E571 /* IDNoCreater */ = {
 			isa = PBXGroup;
 			children = (
+				4861F1B021E8301D0060E571 /* JSONKit.h */,
+				4861F1AF21E8301C0060E571 /* JSONKit.m */,
 				4861F17521E60E590060E571 /* AFNetworking */,
 				4861F12321E484860060E571 /* 时间选择器 */,
 				4861F11E21E18BE80060E571 /* area.txt */,
@@ -358,6 +363,7 @@
 				4861F1AD21E60E590060E571 /* UIRefreshControl+AFNetworking.m in Sources */,
 				4861F1AE21E60E590060E571 /* UIWebView+AFNetworking.m in Sources */,
 				4861F13221E485890060E571 /* NSDate+Helper.m in Sources */,
+				4861F1B121E8301E0060E571 /* JSONKit.m in Sources */,
 				4861F1A921E60E590060E571 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				4861F12C21E484870060E571 /* KTSelectDatePicker.m in Sources */,
 				4861F1A721E60E590060E571 /* AFImageDownloader.m in Sources */,

@@ -13,6 +13,8 @@
 #import "RSheetPicker.h"
 #import "KTSelectDatePicker.h"
 #import "NSDate+Helper.h"
+#import "JSONKit.h"
+#import "CreateModel.h"
 
 @interface CreateViewController ()<UITableViewDelegate,UITableViewDataSource,RSheetPickerDelegate>
 
@@ -23,15 +25,14 @@
 @property (strong, nonatomic) IBOutlet UILabel *sexLab;
 @property (strong, nonatomic) IBOutlet UILabel *countLab;
 
-
-
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-
 
 @property (strong,nonatomic) KTSelectDatePicker * birPicker;
 @property (strong,nonatomic) RSheetPicker * sexSheet;
 @property (strong,nonatomic) RSheetPicker * countSheet;
+@property (strong,nonatomic) RSheetPicker * provSheet;
 @property (strong,nonatomic) NSMutableArray * generArray;
+@property (strong,nonatomic) NSMutableDictionary * provDict;
 
 @end
 
@@ -42,12 +43,15 @@
     // Do any additional setup after loading the view from its nib.
     
     self.title = @"身份证生成";
+    
+    self.provLab.text = @"浙江省";
     self.birLab.text = @"1987-04-25";
     
     self.tableView.rowHeight = 50;
     [self.tableView setTableFooterView:[UIView new]];
     
     [self addGesture];
+    [self getProvData];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
@@ -82,20 +86,41 @@
     
     //
     g = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(sexClicked)];
-    //self.sexLab.superview = YES;
     [self.sexLab.superview addGestureRecognizer:g];
     
     //
     g = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(countClicked)];
-    //self.countLab.userInteractionEnabled = YES;
     [self.countLab.superview addGestureRecognizer:g];
 }
 
-#pragma private
+-(void)getProvData
+{
+    /*
+    self.provArray = nil;
+    self.provArray = [NSMutableArray new];
+    
+    NSString * filePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"area.txt"];
+    
+    NSString * str = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    NSData * data = [str dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSDictionary * dict = [data objectFromJSONData];
+    NSArray * array  = [dict objectForKey:@"data"];
+    
+    for(NSDictionary * subDict in array )
+    {
+        CreateProvModel * provModel = [CreateProvModel modelWithDict:subDict];
+        [self.provArray addObject:provModel];
+    }
+    */
+}
+
 //生成1-6位地区码
 -(NSString*)createAddrNo
 {
-    return @"330481";
+    NSString * str = [self.provDict objectForKey:self.provLab.text];
+    
+    return str;
 }
 
 -(NSString*)createBirNo
@@ -199,6 +224,11 @@
     if( picker == self.countSheet )
         return @[@"1",@"2",@"3",@"4",@"5"];
     
+    if( picker == self.provSheet )
+    {
+        return self.provDict.allKeys;
+    }
+    
     return nil;
 }
 
@@ -215,6 +245,11 @@
     if( picker == self.countSheet )
     {
         self.countLab.text = [NSString stringWithFormat:@"%d",row+1];
+    }
+    
+    if( picker == self.provSheet )
+    {
+        [self.provDict.allKeys objectAtIndex:row];
     }
 }
 
@@ -233,21 +268,17 @@
     [self.tableView reloadData];
 }
 
-
-
 -(void)porvClicked
 {
+    if( !self.provSheet.superview )
+    {
+        [self.view addSubview:self.provSheet];
+    }
     
-}
-
--(void)cityClicked
-{
-    
-}
-
--(void)areaClicked
-{
-    
+    [UIView animateWithDuration:0.5 animations:^{
+        
+        self.provSheet.center = CGPointMake([UIScreen mainScreen].bounds.size.width / 2.0, [UIScreen mainScreen].bounds.size.height/2.0);
+    }];
 }
 
 -(void)birClicked
@@ -331,6 +362,18 @@
 }
 
 
+-(RSheetPicker*)provSheet
+{
+    if(!_provSheet )
+    {
+        _provSheet = [[RSheetPicker alloc]initWithFrame:SCREEN_BOUNDS];
+        _provSheet.center = CGPointMake(_provSheet.center.x, _provSheet.center.y + SCREEN_BOUNDS.size.height);
+        
+        _provSheet.pickerDelegate = self;
+    }
+    return _provSheet;
+}
+
 -(KTSelectDatePicker*)birPicker
 {
     if( !_birPicker )
@@ -357,6 +400,36 @@
     }
     
     return _generArray;
+}
+
+-(NSMutableDictionary*)provDict
+{
+    if(!_provDict )
+    {
+        _provDict = [NSMutableDictionary new];
+        
+        
+        [_provDict setObject:@"110100" forKey:@"北京市"];
+        [_provDict setObject:@"330000" forKey:@"浙江省"];
+        [_provDict setObject:@"350200" forKey:@"福建省"];
+        [_provDict setObject:@"410100" forKey:@"河南省"];
+        [_provDict setObject:@"130100" forKey:@"河北省"];
+        [_provDict setObject:@"230100" forKey:@"黑龙江省"];
+        [_provDict setObject:@"430100" forKey:@"湖南省"];
+        [_provDict setObject:@"420100" forKey:@"湖北省"];
+        [_provDict setObject:@"650100" forKey:@"新疆省"];
+        [_provDict setObject:@"510100" forKey:@"四川省"];
+        [_provDict setObject:@"370100" forKey:@"山东省"];
+        [_provDict setObject:@"530100" forKey:@"云南省"];
+        [_provDict setObject:@"610100" forKey:@"陕西省"];
+        [_provDict setObject:@"140100" forKey:@"山西省"];
+        [_provDict setObject:@"210100" forKey:@"辽宁省"];
+        [_provDict setObject:@"360100" forKey:@"江西省"];
+        [_provDict setObject:@"340100" forKey:@"安徽省"];
+        [_provDict setObject:@"520100" forKey:@"贵州省"];
+    }
+    
+    return _provDict;
 }
 
 @end

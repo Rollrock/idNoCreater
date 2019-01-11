@@ -12,9 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateViewController">
             <connections>
-                <outlet property="areaLab" destination="2jS-h5-clN" id="Qvp-5p-Tvq"/>
                 <outlet property="birLab" destination="se5-sA-L6n" id="odW-lA-iQV"/>
-                <outlet property="cityLab" destination="gQJ-zQ-cbf" id="XHG-EK-h6A"/>
                 <outlet property="countLab" destination="014-bG-mWW" id="XZ8-m6-6py"/>
                 <outlet property="provLab" destination="Kjq-kA-owp" id="lPA-mi-TPG"/>
                 <outlet property="sexLab" destination="8vF-nR-sdf" id="iTy-vx-als"/>
@@ -42,43 +40,11 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="北京市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQJ-zQ-cbf">
-                            <rect key="frame" x="132.5" y="14.5" width="52" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="东城区" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jS-h5-clN">
-                            <rect key="frame" x="202.5" y="14.5" width="52" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwA-p4-mCb">
-                            <rect key="frame" x="119.5" y="14.5" width="8" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJl-Xf-3ta">
-                            <rect key="frame" x="189.5" y="15" width="8" height="20"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="VJl-Xf-3ta" firstAttribute="leading" secondItem="gQJ-zQ-cbf" secondAttribute="trailing" constant="5" id="5W3-mW-dPU"/>
-                        <constraint firstItem="gQJ-zQ-cbf" firstAttribute="leading" secondItem="HwA-p4-mCb" secondAttribute="trailing" constant="5" id="CeE-ma-Y9X"/>
-                        <constraint firstItem="gQJ-zQ-cbf" firstAttribute="centerY" secondItem="2xH-ed-GlS" secondAttribute="centerY" id="JPK-H0-VtX"/>
-                        <constraint firstItem="VJl-Xf-3ta" firstAttribute="centerY" secondItem="2xH-ed-GlS" secondAttribute="centerY" id="KLb-i5-EQL"/>
                         <constraint firstItem="cxZ-iF-qjR" firstAttribute="centerY" secondItem="2xH-ed-GlS" secondAttribute="centerY" id="MSQ-uG-peF"/>
-                        <constraint firstItem="2jS-h5-clN" firstAttribute="leading" secondItem="VJl-Xf-3ta" secondAttribute="trailing" constant="5" id="RER-dI-eer"/>
-                        <constraint firstItem="HwA-p4-mCb" firstAttribute="leading" secondItem="Kjq-kA-owp" secondAttribute="trailing" constant="5" id="SfG-Ua-hFW"/>
                         <constraint firstAttribute="height" constant="50" id="Sm4-Ej-zJj"/>
-                        <constraint firstItem="HwA-p4-mCb" firstAttribute="centerY" secondItem="2xH-ed-GlS" secondAttribute="centerY" id="gpC-1g-GEx"/>
-                        <constraint firstItem="2jS-h5-clN" firstAttribute="centerY" secondItem="2xH-ed-GlS" secondAttribute="centerY" id="raw-lh-ESK"/>
                         <constraint firstItem="cxZ-iF-qjR" firstAttribute="leading" secondItem="2xH-ed-GlS" secondAttribute="leading" constant="20" id="xxh-91-KeB"/>
                         <constraint firstItem="Kjq-kA-owp" firstAttribute="centerY" secondItem="2xH-ed-GlS" secondAttribute="centerY" id="zGB-ee-I1q"/>
                         <constraint firstItem="Kjq-kA-owp" firstAttribute="leading" secondItem="cxZ-iF-qjR" secondAttribute="trailing" constant="5" id="zXa-CV-tcP"/>
@@ -220,7 +186,7 @@
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="oKS-cV-LUz" secondAttribute="trailing" id="wPe-HU-bZh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="-1167" y="117"/>
+            <point key="canvasLocation" x="-1887" y="18"/>
         </view>
     </objects>
 </document>
